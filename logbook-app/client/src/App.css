@@ -3,15 +3,67 @@
 
 
 
+.grid {
+
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 200px 400px 100%;
+
+}
 
 
 
 
+.logo {
+
+  background-color: aquamarine;
+
+}
+
+.image {
+
+  height: 200px;
+  width: 248px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+
+}
 
 
 
 
+.header {
 
+  background-color: rgb(155, 127, 255);
+
+}
+
+
+.form {
+
+  background-color: rgb(255, 127, 127);
+}
+
+
+.records {
+
+  background-color: rgb(138, 255, 127);
+  grid-column: 2/2;
+  grid-row: 2/4;
+}
+
+
+.summary {
+
+  background-color: rgb(255, 221, 127);
+}
+
+
+.greeting {
+  color: rgb(100, 114, 237);
+}
 
 
 
