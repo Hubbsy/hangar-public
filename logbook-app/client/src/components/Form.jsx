@@ -74,7 +74,7 @@ class Form extends React.Component {
             Pilot's Name
           </label>
           <div>
-            <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
+            <input className="inputBox" type="text" name="name" value={this.state.name} onChange={this.handleChange} />
           </div>
       </div>
       <div className="form">
@@ -82,7 +82,7 @@ class Form extends React.Component {
             Flight Duration
           </label>
           <div>
-            <input type="text" name="duration" value={this.state.duration} onChange={this.handleChange} />
+            <input className="inputBox" type="text" name="duration" value={this.state.duration} onChange={this.handleChange} />
           </div>
       </div>
       <div className="form">
@@ -90,7 +90,7 @@ class Form extends React.Component {
             Instructor
           </label>
           <div>
-            <input type="text" name="instructor" value={this.state.instructor} onChange={this.handleChange} />
+            <input className="inputBox" type="text" name="instructor" value={this.state.instructor} onChange={this.handleChange} />
           </div>
       </div>
       <div className="form">
@@ -98,7 +98,7 @@ class Form extends React.Component {
             Time of Day
           </label>
           <div>
-            <input type="text" name="timeOfDay" value={this.state.timeOfDay} onChange={this.handleChange} />
+            <input className="inputBox" type="text" name="timeOfDay" value={this.state.timeOfDay} onChange={this.handleChange} />
           </div>
       </div>
       <div className="form">
@@ -106,7 +106,7 @@ class Form extends React.Component {
             Tail Number
           </label>
           <div>
-            <input type="text" name="tailNumber" value={this.state.tailNumber} onChange={this.handleChange} />
+            <input className="inputBox" type="text" name="tailNumber" value={this.state.tailNumber} onChange={this.handleChange} />
           </div>
       </div>
       <div className="form">
@@ -114,7 +114,7 @@ class Form extends React.Component {
             Aircraft Type
           </label>
           <div>
-            <input type="text" name="type" value={this.state.type} onChange={this.handleChange} />
+            <input className="inputBox" type="text" name="type" value={this.state.type} onChange={this.handleChange} />
           </div>
       </div>
 

@@ -1,7 +1,7 @@
 
 
 
-
+/*****************************GRID**********************/
 
 .grid {
 
@@ -92,10 +92,19 @@
   font-family: "Lucida Console", Courier, monospace;
 }
 
+
+
+
+
 /*******************FORM**************************/
 
 .submit {
   margin-left: 80px;
+  border-radius: 5px;
+}
+
+.inputBox {
+  border-radius: 5px;
 }
 
 .formTitles {
@@ -108,6 +117,12 @@
 
 .formInstructor {
   margin-left: 20px;
+
+}
+
+.instructorTotals {
+  margin-right: 150px;
+  text-align: center;
 }
 
 
@@ -119,41 +134,63 @@
 
 /****************SUMMARY********************/
 
+.summaryBox {
+  outline: auto;
+  margin-left: 20px;
+  /* margin-right: 20px; */
+}
+
+.centerBox {
+  align-content: center;
+  padding-left: 50px;
+}
+
+
 
 .summaryTitle {
-  padding-left: 60px;
+  padding-left: 40px;
+  /* text-align: center; */
 }
 
 
 
 .titles {
-  margin-left: 30px;
+  margin-left: 40px;
   margin-right: 140px;
   outline-style: auto;
-  padding-left: 60px;
-
+  padding-left: 30px;
+  /* text-align: center; */
 }
 
 .totals {
-  padding-left: 40px;
+  padding-left: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
 
 
 }
 
+
+.totalsWeather {
+  /* padding-left: 3px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+
 .totalHours {
-  padding-left: 130px;
+  padding-left: 110px;
   padding-top: 10px;
   padding-bottom: 10px;
 
 }
 
 .titlesInstructor {
-  margin-left: 30px;
+  margin-left: 40px;
   margin-right: 140px;
   outline-style: auto;
-  padding-left: 80px;
+  padding-left: 50px;
 
 }
 

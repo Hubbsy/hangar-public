@@ -6,10 +6,10 @@ import EachRecord from './EachRecord.jsx';
 
 
 const Records = (props) => {
-  console.log(props.flightRecords)
+  console.log(props.flight)
     return (
       <ul className="records">
-        {props.flightRecords.map((record) => {
+        {props.flightRecords.slice(0,11).map((record) => {
           return (
             <EachRecord key={uniqId()} record={record} />
           )
@@ -17,10 +17,6 @@ const Records = (props) => {
       </ul>
     );
 }
-
-
-
-
 
 
 
