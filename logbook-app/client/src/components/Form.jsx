@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';
+
 
 class Form extends React.Component {
   constructor(props) {
@@ -68,44 +68,57 @@ class Form extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-      <div>
-        <label>
-            Pilot's Name:
+      <h2 className="formTitle">Enter Flight Details</h2>
+      <div className="form">
+        <label className="formTitles">
+            Pilot's Name
+          </label>
+          <div>
             <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
-          </label>
+          </div>
       </div>
-      <div>
-          <label>
-            Flight Duration:
+      <div className="form">
+          <label className="formDuration">
+            Flight Duration
+          </label>
+          <div>
             <input type="text" name="duration" value={this.state.duration} onChange={this.handleChange} />
+          </div>
+      </div>
+      <div className="form">
+          <label className="formInstructor">
+            Instructor
           </label>
-      </div>
           <div>
-            <label>
-              Instructor:
-              <input type="text" name="instructor" value={this.state.instructor} onChange={this.handleChange} />
-            </label>
+            <input type="text" name="instructor" value={this.state.instructor} onChange={this.handleChange} />
+          </div>
       </div>
+      <div className="form">
+          <label className="formTitles">
+            Time of Day
+          </label>
           <div>
-            <label>
-              Time of Day:
-              <input type="text" name="timeOfDay" value={this.state.timeOfDay} onChange={this.handleChange} />
-            </label>
+            <input type="text" name="timeOfDay" value={this.state.timeOfDay} onChange={this.handleChange} />
+          </div>
       </div>
+      <div className="form">
+          <label className="formTitles">
+            Tail Number
+          </label>
           <div>
-            <label>
-              Tail Number:
-              <input type="text" name="tailNumber" value={this.state.tailNumber} onChange={this.handleChange} />
-            </label>
+            <input type="text" name="tailNumber" value={this.state.tailNumber} onChange={this.handleChange} />
+          </div>
       </div>
+      <div className="form">
+          <label className="formTitles">
+            Aircraft Type
+          </label>
           <div>
-            <label>
-              Aircraft Type:
-              <input type="text" name="type" value={this.state.type} onChange={this.handleChange} />
-            </label>
+            <input type="text" name="type" value={this.state.type} onChange={this.handleChange} />
+          </div>
       </div>
 
-        <input type="submit" value="Submit" />
+        <input className="submit" type="submit" value="Submit" />
       </form>
     );
   }
