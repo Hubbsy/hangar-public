@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.css';
-import uniqId from 'uniqid';
+// import uniqId from 'uniqid';
 import axios from 'axios';
-
-import flights from './flights.js'
 
 import Records from './components/Records.jsx'
 import Header from './components/Header.jsx'
@@ -70,9 +68,9 @@ class App extends React.Component {
     return (
       <div className="grid">
 
-        <div className="logo">
+        {/* <div className="logo">
           <Logo />
-        </div>
+        </div> */}
 
         <div className="header">
           <Header />

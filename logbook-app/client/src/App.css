@@ -7,27 +7,7 @@
 
   display: grid;
   grid-template-columns: 30% 70%;
-  grid-template-rows: 200px 400px 100%;
-
-}
-
-
-
-
-.logo {
-
-  background-color: aquamarine;
-
-}
-
-.image {
-
-  height: 200px;
-  width: 248px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 5px;
+  grid-template-rows: 450px 400px 100%;
 
 }
 
@@ -36,37 +16,146 @@
 
 .header {
 
-  background-color: rgb(155, 127, 255);
+  background-image: url('./planeHeader.jpg');
+  grid-column: 1/3;
 
+}
+
+.greeting {
+  color: rgb(237, 100, 100);
+  padding-left: 20px;
+}
+
+.about {
+  margin-right: 1000px;
+  padding-left: 30px;
 }
 
 
 .form {
+  background-color:white;
+  padding: 5px;
+  padding-left: 50px;
 
-  background-color: rgb(255, 127, 127);
 }
 
 
 .records {
 
-  background-color: rgb(138, 255, 127);
   grid-column: 2/2;
   grid-row: 2/4;
 }
 
+.eachRecord {
+  height: 120px;
+  width: 80%;
+  outline: auto;
+  outline-width: 1px;
 
-.summary {
-
-  background-color: rgb(255, 221, 127);
 }
 
 
-.greeting {
-  color: rgb(100, 114, 237);
+
+
+
+
+/****************************FLIGHT RECORD CARDS********************************/
+
+.pilot {
+  margin-top: 10px;
+  outline: auto;
+  outline-width: 1px;
+  font-style: italic;
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+.duration {
+  margin-top: 10px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+.instructor {
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+.timeOfDay {
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+.tailNumber {
+  padding-left: 475px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+.type {
+  padding-left: 500px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+/*******************FORM**************************/
+
+.submit {
+  margin-left: 80px;
+}
+
+.formTitles {
+  margin-left: 10px;
+}
+
+.formDuration {
+  margin-left: 5px;
+}
+
+.formInstructor {
+  margin-left: 20px;
 }
 
 
 
+
+
+
+
+
+/****************SUMMARY********************/
+
+
+.summaryTitle {
+  padding-left: 60px;
+}
+
+
+
+.titles {
+  margin-left: 30px;
+  margin-right: 140px;
+  outline-style: auto;
+  padding-left: 60px;
+
+}
+
+.totals {
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+
+}
+
+.totalHours {
+  padding-left: 130px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.titlesInstructor {
+  margin-left: 30px;
+  margin-right: 140px;
+  outline-style: auto;
+  padding-left: 80px;
+
+}
 
 
 
