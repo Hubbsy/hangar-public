@@ -16,8 +16,8 @@ const Summary = (props) => {
         <div>Jeff Hubbell</div>
         <div>Patches O'Hoolihan</div>
       </ul>
-      <div className="titles">Today's Weather</div>
-      <div className="totalsWeather">Temp: 66, Wind: 5 Knots, Deck: 5000ft</div>
+      {/* <div className="titles">Today's Weather</div>
+      <div className="totalsWeather">Temp: 66, Wind: 5 Knots, Deck: 5000ft</div> */}
       </div>
     </div>
   );

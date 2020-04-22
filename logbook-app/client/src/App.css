@@ -1,4 +1,6 @@
-
+body {
+  background-color:#0f171e;
+}
 
 
 /*****************************GRID**********************/
@@ -7,8 +9,7 @@
 
   display: grid;
   grid-template-columns: 30% 70%;
-  grid-template-rows: 450px 400px 100%;
-
+  grid-template-rows: 450px 600px 750px 100px;
 }
 
 
@@ -33,25 +34,56 @@
 
 
 .form {
-  background-color:white;
+  color:white;
   padding: 5px;
-  padding-left: 50px;
-
+  padding-left: 80px;
+  background-color:#0f171e;
+  padding-top: 15px;
 }
+
+.summary {
+  grid-row: 3;
+}
+
 
 
 .records {
-
   grid-column: 2/2;
-  grid-row: 2/4;
+  grid-row: 2/3;
+  color:white;
+  border-radius: 5px;
 }
 
 .eachRecord {
-  height: 120px;
+  height: 200px;
   width: 80%;
-  outline: auto;
   outline-width: 1px;
+  border-radius: 20px;
+  background-color: darkgoldenrod;
 
+}
+
+.footer {
+  grid-column: 1/3;
+  grid-row: 6;
+  background-color: darkslategrey;
+  width: 100%;
+  height: 200px;
+}
+
+.trademark {
+  color: rgb(237, 100, 100);
+  /* padding-top: 180px; */
+  padding-left: 400px;
+  /* padding-bottom: 200px; */
+}
+
+
+
+.gold {
+  height: 200px;
+  width: 200px;
+  padding-left: 1025px;
 }
 
 
@@ -62,34 +94,79 @@
 /****************************FLIGHT RECORD CARDS********************************/
 
 .pilot {
-  margin-top: 10px;
+  margin-top: 25px;
   outline: auto;
-  outline-width: 1px;
-  font-style: italic;
-  font-family: "Lucida Console", Courier, monospace;
+  outline-width: 5px;
+  border-radius: 5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: larger;
+  font-style: unset;
+  color: khaki;
+  background-color: darkslategrey;
+  height: 30px;
 }
 
 .duration {
-  margin-top: 10px;
-  font-family: "Lucida Console", Courier, monospace;
+  /* margin-top: 10px; */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* background-color: darkslategrey; */
+  width:35%;
+  height: 25px;
+  border-radius: 5px;
+  text-align: center;
+  /* margin: 5px; */
+  padding-top: 10px;
+  font-size: large;
+  color: darkslategrey;
+
 }
 
 .instructor {
-  font-family: "Lucida Console", Courier, monospace;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width:35%;
+  height: 25px;
+  border-radius: 5px;
+  text-align: center;
+  /* margin: 5px; */
+  font-size: medium;
+  color: darkslategrey;
 }
 
 .timeOfDay {
-  font-family: "Lucida Console", Courier, monospace;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width:35%;
+  height: 25px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+  font-size: medium;
+  color: darkslategrey;
 }
 
 .tailNumber {
-  padding-left: 475px;
-  font-family: "Lucida Console", Courier, monospace;
+  padding-left: 471px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width:35%;
+  height: 20px;
+  border-radius: 5px;
+  text-align: center;
+  /* margin-bottom: 4px; */
+  font-size: medium;
+  color: darkslategrey;
 }
 
 .type {
   padding-left: 500px;
-  font-family: "Lucida Console", Courier, monospace;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width:35%;
+  /* height: 25px; */
+  border-radius: 5px;
+  /* text-align: center; */
+  /* margin: 15px; */
+  margin-bottom: 100px;
+  font-size: medium;
+  padding-bottom: 200px;
+  color: darkslategrey;
 }
 
 
@@ -99,8 +176,10 @@
 /*******************FORM**************************/
 
 .submit {
-  margin-left: 80px;
+  margin-left: 108px;
   border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
 }
 
 .inputBox {
@@ -109,6 +188,9 @@
 
 .formTitles {
   margin-left: 10px;
+}
+.formTitle {
+  margin-left: 30px;
 }
 
 .formDuration {
@@ -135,41 +217,48 @@
 /****************SUMMARY********************/
 
 .summaryBox {
-  outline: auto;
+
   margin-left: 20px;
-  /* margin-right: 20px; */
+  color: black;
+
 }
 
 .centerBox {
   align-content: center;
   padding-left: 50px;
+  background-color: darkslategrey;
+  border-radius: 30px;
+  width: 350px;
+  height: 300px;
+  background-image: url('./clouds.jpeg');
 }
 
 
 
 .summaryTitle {
-  padding-left: 40px;
+  padding-left: 50px;
+  padding-top: 10px;
   /* text-align: center; */
 }
 
 
 
 .titles {
-  margin-left: 40px;
+  margin-left: 50px;
   margin-right: 140px;
   outline-style: auto;
   padding-left: 30px;
-  /* text-align: center; */
+  padding-bottom: 5px;
+
 }
 
 .totals {
-  padding-left: 20px;
+  padding-left: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
-
+  padding-bottom: 25px;
 
 }
-
 
 .totalsWeather {
   /* padding-left: 3px; */
@@ -187,10 +276,10 @@
 }
 
 .titlesInstructor {
-  margin-left: 40px;
+  margin-left: 50px;
   margin-right: 140px;
   outline-style: auto;
-  padding-left: 50px;
+  padding-left: 40px;
 
 }
 

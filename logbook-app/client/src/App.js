@@ -8,6 +8,7 @@ import Header from './components/Header.jsx'
 import Logo from './components/Logo.jsx'
 import Summary from './components/Summary.jsx'
 import Form from './components/Form.jsx'
+import Footer from './components/footer.jsx'
 
 
 
@@ -86,6 +87,10 @@ class App extends React.Component {
 
         <div className="summary">
           <Summary />
+        </div>
+
+        <div className="footer">
+          <Footer />
         </div>
 
       </div>

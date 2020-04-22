@@ -42,7 +42,27 @@ const addFlights = (req, res) => {
 };
 
 
+const deleteFlight = (req, res) => {
+  const id = req.params.id;
+  console.log(id);
+  models.deleteFlight(id)
+  .then(results => {
+    res.status(200).json({
+      results: results,
+      message: 'Flight Successfuly Removed!'
+    })
+  })
+  .catch(err => {
+    res.status(400).json({
+      message: "Failed to delete Flight!!",
+      err: err
+    })
+  })
+}
+
+
 module.exports = {
   getAllFlights,
-  addFlights
+  addFlights,
+  deleteFlight
 }

@@ -26,6 +26,7 @@ app.use(express.json())
 
 app.get('/api/getFlights', controllers.getAllFlights);
 app.post('/api/addFlights', controllers.addFlights);
+app.delete('/api/deleteFlight/:id', controllers.deleteFlight)
 
 
 

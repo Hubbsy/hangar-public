@@ -9,7 +9,7 @@ const Records = (props) => {
   console.log(props.flight)
     return (
       <ul className="records">
-        {props.flightRecords.slice(0,11).map((record) => {
+        {props.flightRecords.slice(0,6).map((record) => {
           return (
             <EachRecord key={uniqId()} record={record} />
           )

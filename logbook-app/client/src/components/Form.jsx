@@ -6,6 +6,7 @@ class Form extends React.Component {
     super(props);
 
     this.state = {
+      _id: '',
       name: '',
       duration: '',
       instructor: '',
@@ -16,11 +17,14 @@ class Form extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+
   }
 
 
 
   handleChange(event) {
+    event.preventDefault();
     const key = event.target.name
     const value = event.target.value
     this.setState({
@@ -48,12 +52,24 @@ class Form extends React.Component {
     .catch(err => {
       console.log(err);
     })
-    // this.props.addFlightRecord(this.state);
-    // this.clearForm();
   }
 
+  handleDelete(event) {
+    fetch("http://localhost:3000/api/deleteFlight/" + this.state._id, {
+        method: 'DELETE'
+    })
+    .then(function (resp) {
+        alert('Roger That');
+    });
+    // event.preventDefault();
+}
+
+
+
+
   clearForm() {
-    this.setState ({
+    this.setState({
+      _id: '',
       name: '',
       duration: '',
       instructor: '',
@@ -67,59 +83,71 @@ class Form extends React.Component {
 
   render() {
     return (
+    <div>
       <form onSubmit={this.handleSubmit}>
-      <h2 className="formTitle">Enter Flight Details</h2>
-      <div className="form">
-        <label className="formTitles">
-            Pilot's Name
-          </label>
-          <div>
-            <input className="inputBox" type="text" name="name" value={this.state.name} onChange={this.handleChange} />
-          </div>
-      </div>
-      <div className="form">
-          <label className="formDuration">
-            Flight Duration
-          </label>
-          <div>
-            <input className="inputBox" type="text" name="duration" value={this.state.duration} onChange={this.handleChange} />
-          </div>
-      </div>
-      <div className="form">
-          <label className="formInstructor">
-            Instructor
-          </label>
-          <div>
-            <input className="inputBox" type="text" name="instructor" value={this.state.instructor} onChange={this.handleChange} />
-          </div>
-      </div>
-      <div className="form">
+        <h2 className="formTitle">Enter Flight Details</h2>
+        <div className="form">
           <label className="formTitles">
-            Time of Day
-          </label>
-          <div>
-            <input className="inputBox" type="text" name="timeOfDay" value={this.state.timeOfDay} onChange={this.handleChange} />
-          </div>
-      </div>
-      <div className="form">
-          <label className="formTitles">
-            Tail Number
-          </label>
-          <div>
-            <input className="inputBox" type="text" name="tailNumber" value={this.state.tailNumber} onChange={this.handleChange} />
-          </div>
-      </div>
-      <div className="form">
-          <label className="formTitles">
-            Aircraft Type
-          </label>
-          <div>
-            <input className="inputBox" type="text" name="type" value={this.state.type} onChange={this.handleChange} />
-          </div>
-      </div>
-
-        <input className="submit" type="submit" value="Submit" />
+              Pilot's Name
+            </label>
+            <div>
+              <input required className="inputBox" type="text" name="name" value={this.state.name} onChange={this.handleChange} />
+            </div>
+        </div>
+        <div className="form">
+            <label className="formDuration">
+              Flight Duration
+            </label>
+            <div>
+              <input required className="inputBox" type="text" name="duration" value={this.state.duration} onChange={this.handleChange} />
+            </div>
+        </div>
+        <div className="form">
+            <label className="formInstructor">
+              Instructor
+            </label>
+            <div>
+              <input required className="inputBox" type="text" name="instructor" value={this.state.instructor} onChange={this.handleChange} />
+            </div>
+        </div>
+        <div className="form">
+            <label className="formTitles">
+              Time of Day
+            </label>
+            <div>
+              <input required className="inputBox" type="text" name="timeOfDay" value={this.state.timeOfDay} onChange={this.handleChange} />
+            </div>
+        </div>
+        <div className="form">
+            <label className="formTitles">
+              Tail Number
+            </label>
+            <div>
+              <input required className="inputBox" type="text" name="tailNumber" value={this.state.tailNumber} onChange={this.handleChange} />
+            </div>
+        </div>
+        <div className="form">
+            <label className="formTitles">
+              Aircraft Type
+            </label>
+            <div>
+              <input required className="inputBox" type="text" name="type" value={this.state.type} onChange={this.handleChange} />
+            </div>
+        </div>
+          <input className="submit" type="submit" value="Submit" />
       </form>
+      <form onSubmit={this.handleDelete}>
+        <label>
+          Delete by Flight Number
+        </label>
+          <div>
+            <input required className="inputBox" type="text" name="_id" value={this.state._id} onChange={this.handleChange}  />
+          </div>
+          <div>
+            <input className="submit" type="submit" value="delete" />
+          </div>
+      </form>
+  </div>
     );
   }
 
