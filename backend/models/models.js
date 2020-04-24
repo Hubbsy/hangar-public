@@ -41,9 +41,25 @@ const addFlights = (flight) => {
   })
 };
 
+const deleteFlight = (id) => {
+  return new Promise((resolve, reject) => {
+    flightRecord.deleteOne({"_id": id}, (err, docs) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(docs.length)
+      }
+    })
+  })
+};
+
+
+
+
 
 module.exports = {
   getAllFlights,
   addManyFlights,
-  addFlights
+  addFlights,
+  deleteFlight
 }

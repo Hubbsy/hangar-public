@@ -8,7 +8,9 @@ import Header from './components/Header.jsx'
 import Logo from './components/Logo.jsx'
 import Summary from './components/Summary.jsx'
 import Form from './components/Form.jsx'
-
+import Footer from './components/footer.jsx'
+import WeatherHome from './components/WeatherHome.jsx'
+import CurrentWeather from './components/CurrentWeather.jsx'
 
 
 
@@ -85,7 +87,12 @@ class App extends React.Component {
         </div>
 
         <div className="summary">
-          <Summary />
+          <WeatherHome />
+          <CurrentWeather />
+        </div>
+
+        <div className="footer">
+          <Footer />
         </div>
 
       </div>
