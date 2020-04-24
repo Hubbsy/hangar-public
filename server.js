@@ -6,6 +6,7 @@ const cors = require('cors');
 const controllers = require('./backend/controllers/controllers.js')
 const axios = require('axios')
 require('dotenv').config()
+const path = require('path');
 
 
 const PORT = process.env.PORT || 5000;
