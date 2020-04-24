@@ -5,9 +5,10 @@ const morgan = require('morgan');
 const cors = require('cors');
 const controllers = require('./backend/controllers/controllers.js')
 const axios = require('axios')
+require('dotenv').config()
 
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 
 app.use(morgan('dev'))
 app.use(bodyParser.json());
@@ -75,4 +76,4 @@ app.get('/api/search-location-weather', (req, res) => {
 
 
 
-app.listen(PORT, () => console.log(`App listening on port: ${3001} my D0od!`));
+app.listen(PORT, () => console.log(`App listening on port: ${PORT} my D0od!`));
