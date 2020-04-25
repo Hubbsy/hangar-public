@@ -24,7 +24,9 @@ install dependencies:
 fire up local server, install client dependencies, run client in development mode:
 ### `npm run dev`
 
-After executing the commands above, a new window should open in your default browser displaying the web application.  
+The app uses Concurrently to execute multiple npm commands above. If you would like to see the actual npm commands being executed, refer to the package.json file in the root directory. 
+
+A new window should open in your default browser displaying the web application.  
 
 If the window does not open automatically, proceed to http://localhost:3000
 
