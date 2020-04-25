@@ -1,5 +1,5 @@
 # The Hangar
-Logbook landing page that serves as a flight record for new pilot's.  Also renders real time weather information for the user's desired location as well as flight totals and other relevant flight information.  
+Logbook landing page that serves as a flight record for new pilot's.  Also renders real time weather data for the user's desired location as well as flight totals and other relevant flight information.  
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. You may also visit:
@@ -16,13 +16,17 @@ Clone the project onto your system
 
 Open the project directory in your favorite text editor.
 
-cd into the project root directory and execute the following command in the terminal
+cd into the project root directory and execute the following commands in the terminal
 
+install dependencies:
+### `npm install`
+
+fire up local server, install client dependencies, run client in development mode:
 ### `npm run dev`
 
+After executing the commands above, a new window should open in your default browser displaying the web application.  
 
-until finished
-End with an example of getting some data out of the system or using it for a little demo
+If the window does not open automatically, proceed to http://localhost:3000
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
