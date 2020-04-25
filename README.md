@@ -28,8 +28,8 @@ After executing the commands above, a new window should open in your default bro
 
 If the window does not open automatically, proceed to http://localhost:3000
 
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
