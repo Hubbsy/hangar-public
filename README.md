@@ -1,8 +1,12 @@
-# Project Title
-One Paragraph of project description goes here
+# The Hangar
+Logbook landing page that serves as a flight record for new pilot's.  Also renders real time weather information for the user's desired location as well as flight totals and other relevant flight information.  
 
 ## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. You may also visit:
+
+hubbsy-mvp.herokuapp.com
+
+To see a deployed version of the app.  
 
 ## Prerequisites
 What things you need to install the software and how to install them
