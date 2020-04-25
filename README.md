@@ -4,7 +4,7 @@ Logbook landing page that serves as a flight record for new pilot's.  Also rende
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. You may also visit:
 
-hubbsy-mvp.herokuapp.com
+[hubbsy-mvp.herokuapp.com](https://hubbsy-mvp.herokuapp.com)
 
 To see a deployed version of the app.  
 
