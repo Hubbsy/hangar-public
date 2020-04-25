@@ -42,7 +42,7 @@ class Form extends React.Component {
       },
       body: JSON.stringify(this.state)
     }
-    fetch('http://localhost:5000/api/addFlights', options)
+    fetch('/api/addFlights', options)
     .then(response => response.json())
     .then(data => {
       console.log(data);
@@ -55,7 +55,7 @@ class Form extends React.Component {
   }
 
   handleDelete(event) {
-    fetch("http://localhost:5000/api/deleteFlight/" + this.state._id, {
+    fetch("/api/deleteFlight/" + this.state._id, {
         method: 'DELETE'
     })
     .then(function (resp) {
