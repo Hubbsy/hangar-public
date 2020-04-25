@@ -8,17 +8,18 @@ These instructions will get you a copy of the project up and running on your loc
 
 To see a deployed version of the app.  
 
-## Prerequisites
-What things you need to install the software and how to install them
-Give examples
 
 ## Installing
-A step by step series of examples that tell you how to get a development env running
+Running the app in development mode is simple.  
 
-Say what the step will be
+Clone the project onto your system
 
-Give the example
-And repeat
+Open the project directory in your favorite text editor.
+
+cd into the project root directory and execute the following command in the terminal
+
+### `npm run dev`
+
 
 until finished
 End with an example of getting some data out of the system or using it for a little demo
