@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-
- mongoose.connect('mongodb://localhost/flight_records', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/flight_records', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });

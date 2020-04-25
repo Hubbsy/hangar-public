@@ -5,9 +5,11 @@ const morgan = require('morgan');
 const cors = require('cors');
 const controllers = require('./backend/controllers/controllers.js')
 const axios = require('axios')
+require('dotenv').config()
+const path = require('path');
 
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 
 app.use(morgan('dev'))
 app.use(bodyParser.json());
@@ -70,9 +72,20 @@ app.get('/api/search-location-weather', (req, res) => {
 });
 
 
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, 'client/build')));
+    
+  // Handle React routing, return all requests to React app
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
+}
 
 
 
 
 
-app.listen(PORT, () => console.log(`App listening on port: ${3001} my D0od!`));
+
+
+app.listen(PORT, () => console.log(`App listening on port: ${PORT} my D0od!`));
