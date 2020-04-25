@@ -12,7 +12,7 @@ To see a deployed version of the app.
 ## Installing
 Running the app in development mode is simple.  
 
-Clone the project onto your system
+Clone the GitHub repository onto your system
 
 Open the project directory in your favorite text editor.
 
