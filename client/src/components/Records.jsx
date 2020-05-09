@@ -1,19 +1,20 @@
 import React from 'react';
 import uniqId from 'uniqid';
-
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import EachRecord from './EachRecord.jsx';
 
 
 
 const Records = (props) => {
-  console.log(props.flight)
     return (
       <ul className="records">
-        {props.flightRecords.map((record) => {
-          return (
-            <EachRecord key={uniqId()} record={record} />
-          )
-        })}
+        <ReactCSSTransitionGroup>
+          {props.flightRecords.map((record) => {
+            return (
+              <EachRecord key={uniqId()} record={record} />
+            )
+          })}
+        </ReactCSSTransitionGroup>
       </ul>
     );
 }
