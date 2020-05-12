@@ -1,12 +1,14 @@
 import React from 'react';
 import uniqId from 'uniqid';
 import styled from 'styled-components'
+// import pics from '' 
 
 
 const Title = styled.h2`
   color: #fff;
   font-weight: 300;
 `
+
 const Date = styled.div`
   color: #ccc;
   font-weight: 300; 
@@ -56,13 +58,13 @@ const EachRecord = (props) => {
 
   return (
   <div className="eachRecord" >
-    <StyledPhoto src="../ab_cloud-logo-678x381.jpg"/>
+    {/* <StyledPhoto src={pics}/> */}
     <Title> {props.record.name} </Title>
     <Date> {props.date}, {props.record.instructor} </Date>
     <Description> {props.record.type} </Description>
     <Actions>
-      {props.actions.map(({label}) => (
-        <Action key={uniqId()}> {label} </Action>
+      {props.actions.map(({label, ...props}) => (
+        <Action key={uniqId()} {...props}> {label} </Action>
       ))}
     </Actions>
     <div className="timeOfDay">
