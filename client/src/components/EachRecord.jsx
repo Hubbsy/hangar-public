@@ -8,10 +8,10 @@ const Title = styled.h2`
   font-weight: 300;
 `
 
-const Date = styled.div`
+const Time = styled.div`
   color: #ccc;
   font-weight: 300; 
-  ${'' /* margin: 6px 0; */}
+  
 `
 
 const Description = styled.p `
@@ -50,7 +50,8 @@ const StyledPhoto = styled.img `
   border: 1px;
   
 `
-
+let timestamp = new Date();
+let date = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp)
 
 
 const EachRecord = (props) => {
@@ -60,7 +61,7 @@ const EachRecord = (props) => {
   <div className="eachRecord" >
     {/* <StyledPhoto src="../../../219467AD-CFC0-4458-9CE7-39175696EB35_1_105_c.jpeg" /> */}
     <Title> {props.record.name} </Title>
-    <Date> {props.date}, {props.record.instructor} </Date>
+    <Time> {date}, {props.record.instructor} </Time>
     <Description> {props.record.type} </Description>
     <Actions>
       {props.actions.map(({label, ...props}) => (
