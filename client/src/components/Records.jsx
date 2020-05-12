@@ -9,7 +9,7 @@ import EachRecord from './EachRecord.jsx';
 
 const Records = (props) => {
   
-  const date = new Date().toLocaleDateString();
+  
 
   const onCommentsClick = () => alert('You clicked comments')
   const onLikesClick = () => alert('You clicked likes')
@@ -47,7 +47,7 @@ const Records = (props) => {
       <ul className="records">
           {props.flightRecords.map((record) => {
             return (
-              <EachRecord key={uniqId()} record={record} date={date} actions={buttons} />
+              <EachRecord key={uniqId()} record={record} actions={buttons} />
             )
           })}
       </ul>

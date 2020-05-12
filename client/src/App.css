@@ -1,5 +1,6 @@
 body {
   background-color:#0f171e;
+  height: 1000px;
 }
 
 
@@ -43,6 +44,7 @@ body {
 
 .summary {
   grid-row: 3;
+  grid-column:1;
 }
 
 
@@ -53,7 +55,7 @@ body {
   color:white;
   border-radius: 5px;
   overflow: auto;
-  height: 800px;
+  height: 1400px;
 }
 
 
