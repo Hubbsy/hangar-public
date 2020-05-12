@@ -1,5 +1,6 @@
 import React from 'react';
 import uniqId from 'uniqid';
+import {FaCommentAlt, FaThumbsUp, FaRegEye} from 'react-icons/fa';
 import EachRecord from './EachRecord.jsx';
 
 
@@ -8,15 +9,28 @@ import EachRecord from './EachRecord.jsx';
 const Records = (props) => {
   
   const date = new Date().toLocaleDateString();
+
   const buttons = [
     {
-      label: '10 Comments'
+      label: (
+        <>
+        <FaCommentAlt /> 10 Comments
+        </>
+      ),
     },
     {
-      label: '132 Likes'
+      label: (
+        <>
+        <FaThumbsUp /> 200 Likes
+        </>
+      ),
     },
     {
-      label: '145 Views'
+      label: (
+        <>
+        <FaRegEye /> 1000 Views
+        </>
+      ),
     },
   ]
 
