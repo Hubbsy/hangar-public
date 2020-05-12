@@ -1,11 +1,10 @@
 import React from 'react';
-
+import { CSSTransitionGroup } from 'react-transition-group'
 
 const EachRecord = (props) => {
   console.log(props.record)
   return (
     <div className="eachRecord">
-    
       <div className="pilot">
         <div> Pilot: { props.record.name } </div>
       </div>
@@ -27,7 +26,6 @@ const EachRecord = (props) => {
       <div className="type">
         <div> Aircraft Type: { props.record.type } </div>
       </div>
-      
     </div>
   );
 }
