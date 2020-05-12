@@ -31,13 +31,14 @@ const ActionButton = styled.button`
   }
 ` 
 
-const EachRecord = (props) => (
+const EachRecord = (props) => {
+  console.log(props);
+
+  return (
   <div className="eachRecord" >
-    <Title>Today's Flight!</Title>
-    <Date> 5/11/2020 </Date>
-    <Description>
-      Today was a great flight! We flew over the san juan mountains and stopped accross the border for lunch.  I took some great photos over the range!
-    </Description>
+    <Title> {props.record.name} </Title>
+    <Date> {props.date}, {props.record.instructor} </Date>
+    <Description> {props.record.type} </Description>
     <ActionButton>0 Likes </ActionButton>
     <ActionButton>0 Comments </ActionButton>
     <ActionButton>0 Views </ActionButton>
@@ -45,7 +46,8 @@ const EachRecord = (props) => (
        <div> { props.record._id } </div>
     </div>
   </div>
-)
+  )
+}
 
 
 

@@ -24,7 +24,7 @@ const Records = (props) => {
       <ul className="records">
           {props.flightRecords.map((record) => {
             return (
-              <EachRecord key={uniqId()} record={record} date={date} />
+              <EachRecord key={uniqId()} record={record} date={date} actions={buttons} />
             )
           })}
       </ul>

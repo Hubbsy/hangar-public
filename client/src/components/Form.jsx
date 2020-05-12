@@ -45,7 +45,7 @@ class Form extends React.Component {
     fetch('/api/addFlights', options)
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+      // console.log(data);
       this.props.addFlightRecord();
       this.clearForm();
     })
@@ -88,7 +88,7 @@ class Form extends React.Component {
         <h2 className="formTitle">Enter Flight Details</h2>
         <div className="form">
           <label className="formTitles">
-              Name of Pilot and Flight
+              Name of Pilot
             </label>
             <div>
               <input required className="inputBox" type="text" name="name" value={this.state.name} onChange={this.handleChange} />
