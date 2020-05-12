@@ -17,7 +17,7 @@ const Description = styled.p`
   font-weight: 300;
 `
 
-const ActionButton = styled.button`
+const Action = styled.button`
   margin: 0 5px;
   padding: 8px 14px;
   background: rgba(155, 155, 155, 0.2);
@@ -39,9 +39,9 @@ const EachRecord = (props) => {
     <Title> {props.record.name} </Title>
     <Date> {props.date}, {props.record.instructor} </Date>
     <Description> {props.record.type} </Description>
-    <ActionButton>0 Likes </ActionButton>
-    <ActionButton>0 Comments </ActionButton>
-    <ActionButton>0 Views </ActionButton>
+    {props.actions.map(({label}) => (
+      <Action> {label} </Action>
+    ))}
     <div className="timeOfDay">
        <div> { props.record._id } </div>
     </div>
