@@ -88,23 +88,23 @@ class Form extends React.Component {
         <h2 className="formTitle">Enter Flight Details</h2>
         <div className="form">
           <label className="formTitles">
-              Pilot's Name
+              Name of Pilot and Flight
             </label>
             <div>
               <input required className="inputBox" type="text" name="name" value={this.state.name} onChange={this.handleChange} />
             </div>
         </div>
-        <div className="form">
+        {/* <div className="form">
             <label className="formDuration">
               Flight Duration
             </label>
             <div>
               <input required className="inputBox" type="text" name="duration" value={this.state.duration} onChange={this.handleChange} />
             </div>
-        </div>
+        </div> */}
         <div className="form">
             <label className="formInstructor">
-              Instructor
+              Name of flight
             </label>
             <div>
               <input required className="inputBox" type="text" name="instructor" value={this.state.instructor} onChange={this.handleChange} />
@@ -118,17 +118,17 @@ class Form extends React.Component {
               <input required className="inputBox" type="text" name="timeOfDay" value={this.state.timeOfDay} onChange={this.handleChange} />
             </div>
         </div> */}
-        <div className="form">
+        {/* <div className="form">
             <label className="formTitles">
               Tail Number
             </label>
             <div>
               <input required className="inputBox" type="text" name="tailNumber" value={this.state.tailNumber} onChange={this.handleChange} />
             </div>
-        </div>
+        </div> */}
         <div className="form">
             <label className="formTitles">
-              Aircraft Type
+              Description of flight
             </label>
             <div>
               <input required className="inputBox" type="text" name="type" value={this.state.type} onChange={this.handleChange} />

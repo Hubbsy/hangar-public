@@ -9,7 +9,7 @@ const Title = styled.h2`
 const Date = styled.div`
   color: #ccc;
   font-weight: 300; 
-  margin: 6px 0;
+  ${'' /* margin: 6px 0; */}
 `
 
 const Description = styled.p`
@@ -41,6 +41,9 @@ const EachRecord = (props) => (
     <ActionButton>0 Likes </ActionButton>
     <ActionButton>0 Comments </ActionButton>
     <ActionButton>0 Views </ActionButton>
+    <div className="timeOfDay">
+       <div> { props.record._id } </div>
+    </div>
   </div>
 )
 
