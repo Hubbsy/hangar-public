@@ -49,7 +49,7 @@ app.get('/api/search-location-weather', (req, res) => {
   //build api URL with user zip
   zipcode = req.body.zipcode
   const baseUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-  const apiId = '&appid=ff3f60528265fb63b9f793d1b2b51017&units=imperial';
+  const apiId = process.env.WEATHER_API;
 
   const userLocation = (url1, url2, zipcode) => {
 

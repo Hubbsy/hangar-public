@@ -1,4 +1,37 @@
+# The Hangar
+Logbook landing page that serves as a flight record for new pilot's.  Also renders real time weather data for the user's desired location as well as flight totals and other relevant flight information.  
+
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. You may also visit:
+
+[hubbsy-mvp.herokuapp.com](https://hubbsy-mvp.herokuapp.com)
+
+To see a deployed version of the app.  
+
+
+## Installing
+Running the app in development mode is simple.  
+
+Clone the GitHub repository onto your system
+
+Open the project directory in your favorite text editor.
+
+cd into the project root directory and execute the following commands in the terminal
+
+install dependencies:
+### `npm install`
+
+fire up local server, install client dependencies, run client in development mode:
+### `npm run dev`
+
+The app uses Concurrently to execute multiple npm commands above. If you would like to see the actual npm commands being executed, refer to the package.json file in the root directory. 
+
+A new window should open in your default browser displaying the web application.  
+
+If the window does not open automatically, proceed to http://localhost:3000
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 

@@ -110,14 +110,14 @@ class Form extends React.Component {
               <input required className="inputBox" type="text" name="instructor" value={this.state.instructor} onChange={this.handleChange} />
             </div>
         </div>
-        <div className="form">
+        {/* <div className="form">
             <label className="formTitles">
               Time of Day
             </label>
             <div>
               <input required className="inputBox" type="text" name="timeOfDay" value={this.state.timeOfDay} onChange={this.handleChange} />
             </div>
-        </div>
+        </div> */}
         <div className="form">
             <label className="formTitles">
               Tail Number

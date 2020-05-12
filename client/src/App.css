@@ -54,14 +54,6 @@ body {
   border-radius: 5px;
 }
 
-.eachRecord {
-  height: 200px;
-  width: 80%;
-  outline-width: 1px;
-  border-radius: 20px;
-  background-color: darkgoldenrod;
-
-}
 
 .footer {
   grid-column: 1/3;
@@ -160,15 +152,47 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   width:35%;
   /* height: 25px; */
-  border-radius: 5px;
+  border-radius: 50px;
   /* text-align: center; */
   /* margin: 15px; */
-  margin-bottom: 100px;
+  margin-bottom: 300px;
   font-size: medium;
-  padding-bottom: 200px;
   color: darkslategrey;
 }
 
+
+/*************************fade in for records*************/
+
+.eachRecord {
+  height: 200px;
+  width: 80%;
+  outline-width: 1px;
+  border-radius: 20px;
+  background-color: darkgoldenrod;
+  float: bottom; 
+}
+
+.test-enter {
+  opacity: 0.01;
+  width: 0px;
+}
+
+.test-enter.example-enter-active {
+  opacity: 1;
+  width: 80%;
+  transition: 1000ms;
+}
+
+.test-leave {
+  opacity: 1;
+  width: 80%;
+}
+
+.test-leave.example-leave-active {
+  opacity: 0.01;
+  width: 0px;
+  transition: 1000ms;
+}
 
 
 

@@ -7,7 +7,7 @@ const flightRecord = require('../db/connection.js');
 // MONGODB MODELS
 const getAllFlights = () => {
   return new Promise((resolve, reject) => {
-      flightRecord.collection.find({}).sort({$natural:-1}).toArray((err, results) => {
+      flightRecord.collection.find({}).limit(6).sort({_id:-1}).toArray((err, results) => {
       if(err) {
         reject(err);
       } else {
