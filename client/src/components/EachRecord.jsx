@@ -1,23 +1,26 @@
 import React from 'react';
+import uniqId from 'uniqid';
 import styled from 'styled-components'
+// import pics from '' 
 
 
 const Title = styled.h2`
   color: #fff;
   font-weight: 300;
 `
+
 const Date = styled.div`
   color: #ccc;
   font-weight: 300; 
   ${'' /* margin: 6px 0; */}
 `
 
-const Description = styled.p`
+const Description = styled.p `
   color: #fff;
   font-weight: 300;
 `
 
-const Action = styled.button`
+const Action = styled.button `
   margin: 0 5px;
   padding: 8px 14px;
   background: rgba(155, 155, 155, 0.2);
@@ -31,17 +34,39 @@ const Action = styled.button`
   }
 ` 
 
+const Actions = styled.div `
+  color:#333; 
+  display: flex; 
+  align-items: center;
+  svg {
+    transform: translateY(2px);
+    margin-right: 5px; 
+  }
+`
+
+const StyledPhoto = styled.img `
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  border: 1px;
+`
+
+
+
 const EachRecord = (props) => {
   console.log(props);
 
   return (
   <div className="eachRecord" >
+    {/* <StyledPhoto src={pics}/> */}
     <Title> {props.record.name} </Title>
     <Date> {props.date}, {props.record.instructor} </Date>
     <Description> {props.record.type} </Description>
-    {props.actions.map(({label}) => (
-      <Action> {label} </Action>
-    ))}
+    <Actions>
+      {props.actions.map(({label, ...props}) => (
+        <Action key={uniqId()} {...props}> {label} </Action>
+      ))}
+    </Actions>
     <div className="timeOfDay">
        <div> { props.record._id } </div>
     </div>

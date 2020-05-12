@@ -1,5 +1,7 @@
 import React from 'react';
 import uniqId from 'uniqid';
+import styled from 'styled-components';
+import {FaCommentAlt, FaThumbsUp, FaRegEye} from 'react-icons/fa';
 import EachRecord from './EachRecord.jsx';
 
 
@@ -8,15 +10,36 @@ import EachRecord from './EachRecord.jsx';
 const Records = (props) => {
   
   const date = new Date().toLocaleDateString();
+
+  const onCommentsClick = () => alert('You clicked comments')
+  const onLikesClick = () => alert('You clicked likes')
+  const onViewsClick = () => alert('You clicked views')
+
+
   const buttons = [
     {
-      label: '10 Comments'
+      label: (
+        <>
+        <FaCommentAlt /> 10 Comments
+        </>
+      ),
+      onClick: onCommentsClick,
     },
     {
-      label: '132 Likes'
+      label: (
+        <>
+        <FaThumbsUp /> 200 Likes
+        </>
+      ),
+      onClick: onLikesClick,
     },
     {
-      label: '145 Views'
+      label: (
+        <>
+        <FaRegEye /> 1000 Views
+        </>
+      ),
+      onClick: onViewsClick,
     },
   ]
 
