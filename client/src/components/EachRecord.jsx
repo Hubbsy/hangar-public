@@ -17,6 +17,19 @@ const Description = styled.p`
   font-weight: 300;
 `
 
+const ActionButton = styled.button`
+  margin: 0 5px;
+  padding: 8px 14px;
+  background: rgba(155, 155, 155, 0.2);
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #fff;
+  outline: 0;
+  font-weight: 300;
+  :hover {
+    opacity: 0.8;
+  }
+` 
 
 const EachRecord = (props) => (
   <div className="eachRecord" >
@@ -25,6 +38,9 @@ const EachRecord = (props) => (
     <Description>
       Today was a great flight! We flew over the san juan mountains and stopped accross the border for lunch.  I took some great photos over the range!
     </Description>
+    <ActionButton>0 Likes </ActionButton>
+    <ActionButton>0 Comments </ActionButton>
+    <ActionButton>0 Views </ActionButton>
   </div>
 )
 
