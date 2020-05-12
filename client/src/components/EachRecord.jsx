@@ -1,8 +1,7 @@
 import React from 'react';
 import uniqId from 'uniqid';
-import styled from 'styled-components'
-// import pics from '' 
-
+import styled from 'styled-components'  
+// import pics from '../assets/weather_icons/01W.svg'
 
 const Title = styled.h2`
   color: #fff;
@@ -49,6 +48,7 @@ const StyledPhoto = styled.img `
   height: 100%; 
   object-fit: cover;
   border: 1px;
+  
 `
 
 
@@ -58,7 +58,7 @@ const EachRecord = (props) => {
 
   return (
   <div className="eachRecord" >
-    {/* <StyledPhoto src={pics}/> */}
+    {/* <StyledPhoto src="../../../219467AD-CFC0-4458-9CE7-39175696EB35_1_105_c.jpeg" /> */}
     <Title> {props.record.name} </Title>
     <Date> {props.date}, {props.record.instructor} </Date>
     <Description> {props.record.type} </Description>
