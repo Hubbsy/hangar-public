@@ -43,7 +43,7 @@ class App extends React.Component {
   getAllFlightRecords() {
     axios.get('/api/getFlights')
     .then(result => {
-      console.log(result)
+      // console.log(result)
        this.setState({
          flightRecords: result.data.flights
        })

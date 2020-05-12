@@ -9,7 +9,7 @@ const Title = styled.h2`
 const Date = styled.div`
   color: #ccc;
   font-weight: 300; 
-  margin: 6px 0;
+  ${'' /* margin: 6px 0; */}
 `
 
 const Description = styled.p`
@@ -17,7 +17,7 @@ const Description = styled.p`
   font-weight: 300;
 `
 
-const ActionButton = styled.button`
+const Action = styled.button`
   margin: 0 5px;
   padding: 8px 14px;
   background: rgba(155, 155, 155, 0.2);
@@ -31,18 +31,23 @@ const ActionButton = styled.button`
   }
 ` 
 
-const EachRecord = (props) => (
+const EachRecord = (props) => {
+  console.log(props);
+
+  return (
   <div className="eachRecord" >
-    <Title>Today's Flight!</Title>
-    <Date> 5/11/2020 </Date>
-    <Description>
-      Today was a great flight! We flew over the san juan mountains and stopped accross the border for lunch.  I took some great photos over the range!
-    </Description>
-    <ActionButton>0 Likes </ActionButton>
-    <ActionButton>0 Comments </ActionButton>
-    <ActionButton>0 Views </ActionButton>
+    <Title> {props.record.name} </Title>
+    <Date> {props.date}, {props.record.instructor} </Date>
+    <Description> {props.record.type} </Description>
+    {props.actions.map(({label}) => (
+      <Action> {label} </Action>
+    ))}
+    <div className="timeOfDay">
+       <div> { props.record._id } </div>
+    </div>
   </div>
-)
+  )
+}
 
 
 
