@@ -4,6 +4,8 @@ import React from 'react';
 class Form extends React.Component {
   constructor(props) {
     super(props);
+    // let timestamp = new Date();
+    // let date = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(timestamp)
 
     this.state = {
       _id: '',
@@ -104,7 +106,7 @@ class Form extends React.Component {
         </div> */}
         <div className="form">
             <label className="formInstructor">
-              Name of flight
+              Date and Destination
             </label>
             <div>
               <input required className="inputBox" type="text" name="instructor" value={this.state.instructor} onChange={this.handleChange} />
